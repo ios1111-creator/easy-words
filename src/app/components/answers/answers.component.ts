@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {WordType} from "../../data/models";
 
 @Component({
   selector: 'app-answers',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./answers.component.css']
 })
 export class AnswersComponent implements OnInit {
-
+@Input() words:WordType[];
+@Input() title;
   constructor() { }
 
   ngOnInit(): void {
