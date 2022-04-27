@@ -7,29 +7,36 @@ import {WORDS} from "../data/data-bsae";
 })
 export class WordsService {
 
-  private words:WordType[]=[];
-  private nouns:WordType[]=[];
-  private verbs:WordType[]=[];
+  private words: WordType[] = [];
+  private nouns: WordType[] = [];
+  private verbs: WordType[] = [];
+
   constructor() {
-    this.words=WORDS;
+    this.words = WORDS;
   }
-  getWords():WordType[]{
+
+  getWords(): WordType[] {
     return this.words
   }
-  getNoun():WordType[]{
+
+  getNoun(): WordType[] {
     return this.nouns
   }
-  getVerb():WordType[]{
+
+  getVerb(): WordType[] {
     return this.verbs;
   }
-  addNoun(value:WordType):void{
+
+  addNoun(value: WordType): void {
     this.nouns.push(value);
   }
-  addVerb(value:WordType):void{
+
+  addVerb(value: WordType): void {
     this.verbs.push(value);
   }
-  check(){
-    this.nouns.map(word=>(word.correct=word.type===Type.NOUN));
-    this.verbs.map(word=>(word.correct=word.type===Type.VERB));
+
+  check() {
+    this.nouns.map(word => (word.correct = word.type === Type.NOUN));
+    this.verbs.map(word => (word.correct = word.type === Type.VERB));
   }
 }
