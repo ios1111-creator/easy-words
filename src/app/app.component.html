@@ -3,9 +3,9 @@
     <app-question></app-question>
   </div>
   <div class="col s6">
-    <app-answers title="Noun" [words]="nouns"></app-answers>
+    <app-answers title="Noun" [word]="nouns |async"></app-answers>
   </div>
   <div class="col s6">
-    <app-answers title="Verb" [words]="verbs"></app-answers>
+    <app-answers title="Verb" [word]="verbs | async"></app-answers>
   </div>
 </div>
