@@ -7,3 +7,4 @@ export interface WordType {
 export enum Type {
   NOUN, VERB
 }
+

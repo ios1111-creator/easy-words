@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {WordsService} from "./services/words.service";
 
 @Component({
@@ -8,12 +8,10 @@ import {WordsService} from "./services/words.service";
 })
 export class AppComponent {
   title = 'easy-words';
-  constructor(private serviceWords:WordsService) {
+  nouns = this.serviceWords.getNoun();
+  verbs = this.serviceWords.getVerb()
+
+  constructor(private serviceWords: WordsService) {
   }
-  get nouns(){
-    return this.serviceWords.getNoun();
-  }
-  get verbs(){
-    return this.serviceWords.getVerb();
-  }
+
 }

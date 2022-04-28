@@ -7,9 +7,16 @@ import {WordType} from "../../data/models";
   styleUrls: ['./answers.component.css']
 })
 export class AnswersComponent implements OnInit {
-@Input() words:WordType[];
-@Input() title;
-  constructor() { }
+  words: WordType[] = [];
+  @Input() title;
+
+  @Input() set word(word: WordType){
+    if (word){
+      this.words.push(word);
+    }
+  }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
